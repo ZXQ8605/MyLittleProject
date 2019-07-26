@@ -84,7 +84,7 @@ void CCounter::OnBnClickedCheckcounter()
 	CDialog::OnOK();
 	CMainFrame *pMain = (CMainFrame *)AfxGetApp()->m_pMainWnd;
 	CLogFileFilterView *pView = (CLogFileFilterView *)pMain->GetActiveView();
-	
+
 	CLogFileOperation::GetQueryTimeWin(m_CounterQueryTimeStart, m_CounterQueryTimeStop, m_TimeStartCounter, m_TimeStopCounter);
 	if(m_TimeStartCounter > m_TimeStopCounter)
 	{
@@ -94,7 +94,7 @@ void CCounter::OnBnClickedCheckcounter()
 	pView->m_pListBox->AddString("分析计数器信息:");
 	//根据查询时间查询结果
 	GetQueryResult();
-	if(pView->m_pListBox->GetCount() > 1 && 
+	if(pView->m_pListBox->GetCount() > 1 &&
 		pView->m_pListBox->SetTopIndex(pView->m_pListBox->GetCount() -1))
 	{
 		MessageBox("Set scroll bar error!");
@@ -108,7 +108,7 @@ void CCounter::OnBnClickedCheckcounter()
 void CCounter::OnBnClickedCancelcounter()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	CDialog::OnCancel(); 
+	CDialog::OnCancel();
 }
 
 void CCounter::GetQueryResult(void)
@@ -175,7 +175,7 @@ void CCounter::GetQueryResult(void)
 			pMyView->m_pListBox->UpdateWindow();
 			continue;
 		}
-		strData = strJudge.Mid(nFirstWin + strlen("[RPYCNT]"), 
+		strData = strJudge.Mid(nFirstWin + strlen("[RPYCNT]"),
 			dataReplay.m_len - nFirstWin - strlen("[RPYCNT]"));
 		strStationNum = strData.Left(4);
 		strStationEquipmentType = strData.Mid(4, 4);
@@ -184,10 +184,10 @@ void CCounter::GetQueryResult(void)
 		strCounterNum = strData.Mid(16, 4);
 		sprintf_s(bufCounterDate, sizeof(bufCounterDate), "%d-%d-%d", logTime.GetYear(), logTime.GetMonth(), logTime.GetDay());
 		strCounterDate.Format("%s", bufCounterDate);
-		sprintf_s(strTmp, sizeof(strTmp), "%d-%d-%d", strtol(strStationNum, NULL, 16), 
+		sprintf_s(strTmp, sizeof(strTmp), "%d-%d-%d", strtol(strStationNum, NULL, 16),
 			strtol(strStationEquipmentType, NULL, 16), strtol(strStationEquipmentID, NULL, 16));
 		// 查询mapCounter是否存在当前设备的记录，有的话返回存放该设备记录的地址，没有的话返回end()
-		iter = mapCounter.find((CString)strTmp);	
+		iter = mapCounter.find((CString)strTmp);
 		mapNum = strtol(strCounterNum, NULL, 16);
 		if(mapCounter.empty())
 		{
@@ -225,7 +225,7 @@ void CCounter::GetQueryResult(void)
 				{
 					iter->second.counterYearMonthDay = strCounterDate;
 					iter->second.counterNum = mapNum;
-				}	
+				}
 			}
 			else
 			{	// map不为空，但没有该设备,直接在map中添加该记录
@@ -235,7 +235,7 @@ void CCounter::GetQueryResult(void)
 			}
 		}
 		strCounterNum.Format("%d", mapNum);
-		strCounterResult = strRecordTime + " 设备(" + strTmp + ")状态(" + strCounterState + 
+		strCounterResult = strRecordTime + " 设备(" + strTmp + ")状态(" + strCounterState +
 			") 计数值" +  strCounterNum +  strTmpCount;
 		pMyView->m_pListBox->AddString(strCounterResult);
 		nNum++;
@@ -243,11 +243,11 @@ void CCounter::GetQueryResult(void)
 	}
 	if(nNum == 0)
 	{
-		CString strNoQueryRes = m_TimeStartCounter.Format("%Y-%m-%d %H:%M:%S") + "--"+ 
+		CString strNoQueryRes = m_TimeStartCounter.Format("%Y-%m-%d %H:%M:%S") + "--"+
 			m_TimeStopCounter.Format("%Y-%m-%d %H:%M:%S") + " 无计数器信息";
 		pMyView->m_pListBox->AddString(strNoQueryRes);
 	}
-	if(pMyView->m_pListBox->GetCount() > 1 && 
+	if(pMyView->m_pListBox->GetCount() > 1 &&
 		pMyView->m_pListBox->SetTopIndex(pMyView->m_pListBox->GetCount() -1))
 	{
 		MessageBox("Set scroll bar error!");
@@ -264,11 +264,11 @@ void CCounter::DisplayFileReadCountInOneLine(int numFixedLine, int count)
 	CMainFrame *pMain = (CMainFrame *)AfxGetApp()->m_pMainWnd;
 	CLogFileFilterView *pView = (CLogFileFilterView *)pMain->GetActiveView();
 	CString strFileCount;
-	strFileCount.Format("查询计数器信息中:%d", count); 
+	strFileCount.Format("查询计数器信息中:%d", count);
 	pView->m_pListBox->DeleteString(numFixedLine-1);
 	pView->m_pListBox->InsertString(numFixedLine-1, strFileCount);
-	pMain = NULL;
-	pView = NULL;
 	delete pView;
 	delete pMain;
+	pMain = NULL;
+	pView = NULL;
 }

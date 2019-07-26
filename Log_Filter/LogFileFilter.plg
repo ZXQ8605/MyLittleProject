@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: LogFileFilter - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/LogFileFilter.res" /d "_DEBUG" /d "_AFXDLL" "C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\LogFileFilter.rc"" 
+Creating temporary file "C:\Users\62520\AppData\Local\Temp\RSP6739.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/LogFileFilter.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\CodeBitDlg.cpp"
+"C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\LogFileFilter.cpp"
+"C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\LogFileFilterDoc.cpp"
+"C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\LogFileFilterView.cpp"
+"C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\LogHandle.cpp"
+"C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\Users\62520\AppData\Local\Temp\RSP6739.tmp" 
+Creating temporary file "C:\Users\62520\AppData\Local\Temp\RSP673A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/LogFileFilter.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\62520\AppData\Local\Temp\RSP673A.tmp" 
+Creating temporary file "C:\Users\62520\AppData\Local\Temp\RSP673B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/LogFileFilter.pdb" /debug /machine:I386 /out:"Debug/LogFileFilter.exe" /pdbtype:sept 
+.\Debug\CodeBitDlg.obj
+.\Debug\LogFileFilter.obj
+.\Debug\LogFileFilterDoc.obj
+.\Debug\LogFileFilterView.obj
+.\Debug\LogHandle.obj
+.\Debug\MainFrm.obj
+.\Debug\StdAfx.obj
+.\Debug\LogFileFilter.res
+]
+Creating command line "link.exe @C:\Users\62520\AppData\Local\Temp\RSP673B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CodeBitDlg.cpp
+C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\CodeBitDlg.cpp(202) : error C2664: '__thiscall CStdioFile::CStdioFile(struct _iobuf *)' : cannot convert parameter 1 from 'struct _iobuf' to 'struct _iobuf *'
+        No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\CodeBitDlg.cpp(203) : error C2819: type '_iobuf' does not have an overloaded member 'operator ->'
+        c:\program files\microsoft visual studio\vc98\include\mbstring.h(92) : see declaration of '_iobuf'
+C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\CodeBitDlg.cpp(203) : error C2227: left of '->_flag' must point to class/struct/union
+C:\Users\62520\Desktop\Code_Analysis\LogFileFilter\CodeBitDlg.cpp(203) : fatal error C1903: unable to recover from previous error(s); stopping compilation
+LogFileFilter.cpp
+LogFileFilterDoc.cpp
+LogFileFilterView.cpp
+LogHandle.cpp
+MainFrm.cpp
+Generating Code...
+Error executing cl.exe.
+Creating command line "bscmake.exe /nologo /o"Debug/LogFileFilter.bsc"  .\Debug\StdAfx.sbr .\Debug\CodeBitDlg.sbr .\Debug\LogFileFilter.sbr .\Debug\LogFileFilterDoc.sbr .\Debug\LogFileFilterView.sbr .\Debug\LogHandle.sbr .\Debug\MainFrm.sbr"
+Creating browse info file...
+BSCMAKE: error BK1506 : cannot open file '.\Debug\CodeBitDlg.sbr': No such file or directory
+Error executing bscmake.exe.
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+LogFileFilter.exe - 5 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,510 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\LogFileFilter.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\LogFileFilter.ico"
+IDR_LOGFILTYPE          ICON                    "res\\LogFileFilterDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "文件"
+    BEGIN
+        MENUITEM "设置CADCOM(上下位机通信)文件",          ID_SELECT_CADCOM
+        MENUITEM "设置IPDBG文件",                   ID_SELECT_IPDBG
+    END
+    POPUP "分析"
+    BEGIN
+        MENUITEM "分析表示控制码位信息",                  ID_CODEBIT
+        MENUITEM "分析车次窗信息",                     ID_TRAINNUMWIN
+        MENUITEM "分析分路不良信息",                    ID_POORSPERATION
+        MENUITEM "分析计数器信息",                     ID_COUNTER
+        MENUITEM "分析主连接信息",                     ID_MASTERCONNECTION
+    END
+    POPUP "其他"
+    BEGIN
+        MENUITEM "清除查询结果",                      ID_CLEANSCREEN
+        MENUITEM "转换IPDBG文件",                   ID_CHANGE
+        MENUITEM "保存查询结果",                      ID_RESULTCONSERVE
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 LogFileFilter(&A)...",     ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 LogFileFilter"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "LogFileFilter 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2018",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_CODEBIT DIALOGEX 0, 0, 362, 233
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    CONTROL         "选择所有码位",IDC_CHOOSECTRCODE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,196,73,64,10
+    CONTROL         "删除所选码位",IDC_CHOOSECTRSOME,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,196,88,64,10
+    LTEXT           "选择控制码位：",IDC_STATIC,197,57,57,8
+    LTEXT           "日志时间跨度：",IDC_STATIC,13,15,57,8
+    EDITTEXT        IDC_LOGTIMESPAN,74,13,146,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "查询时间：",IDC_STATIC,16,38,41,8
+    CONTROL         "DateTimePicker1",IDC_QUERYTIMESTART,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,57,35,100,15
+    LTEXT           "至",IDC_STATIC,163,38,9,8
+    CONTROL         "DateTimePicker2",IDC_QUERYTIMESTOP,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,177,35,100,15
+    LTEXT           "选择表示码位：",IDC_STATIC,12,57,57,8
+    CONTROL         "选择所有码位",IDC_CHOOSEEXPCODE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,11,72,64,10
+    CONTROL         "删除所选码位",IDC_CHOOSEEXPSOME,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,10,86,64,10
+    PUSHBUTTON      ">>",IDC_EXPINCREASE,72,119,28,14
+    PUSHBUTTON      "<<",IDC_EXPDECREASE,72,141,28,14
+    PUSHBUTTON      ">>",IDC_CTRINCREASE,258,118,27,14
+    PUSHBUTTON      "<<",IDC_CTRDECREASE,258,142,27,14
+    PUSHBUTTON      "查询",IDC_CHECK,80,202,50,14
+    PUSHBUTTON      "取消",IDC_CANCEL,169,203,50,14
+    LISTBOX         IDC_EXPCODELIST,7,104,65,80,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_EXPCODESELECTLIST,100,103,67,82,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,0,HIDC_EXPCODESELECTLIST
+    LISTBOX         IDC_CTRCODELIST,195,102,63,83,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_CTRCODESELECTLIST,285,102,64,85,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_TRAINNUMWIN DIALOGEX 0, 0, 363, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "分析车次窗信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "查询",IDC_CHECK,100,112,50,14
+    PUSHBUTTON      "取消",IDCANCEL,218,114,50,14
+    LTEXT           "日志时间跨度：",IDC_STATIC,33,20,57,8
+    EDITTEXT        IDC_LOGTIMESPANWIN,90,17,189,18,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "查询时间：",IDC_STATIC,33,61,41,8
+    CONTROL         "",IDC_QUERYTIMESTARTWIN,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,69,57,112,18
+    LTEXT           "至",IDC_STATIC,185,60,9,8
+    CONTROL         "",IDC_QUERYTIMESTOPWIN,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,199,57,119,18
+END
+
+IDD_POORSPERATION DIALOGEX 0, 0, 363, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "分析分路不良信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "查询",IDC_CHECKPOOR,100,107,50,14
+    PUSHBUTTON      "取消",IDC_CANCELPOOR,221,107,50,14
+    LTEXT           "日志时间跨度：",IDC_STATIC,33,20,57,8
+    EDITTEXT        IDC_LOGTIMESPANPOOR,90,17,184,18,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "查询时间：",IDC_STATIC,33,61,41,8
+    CONTROL         "",IDC_QUERYTIMESTARTPOOR,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,69,57,115,18
+    LTEXT           "至",IDC_STATIC,189,61,9,8
+    CONTROL         "",IDC_QUERYTIMESTOPPOOR,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,203,57,118,18
+END
+
+IDD_COUNTER DIALOGEX 0, 0, 363, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " 分析计数器信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "查询",IDC_CHECKCOUNTER,106,112,50,14
+    PUSHBUTTON      "取消",IDC_CANCELCOUNTER,220,112,50,14
+    LTEXT           "日志时间跨度：",IDC_STATIC,33,20,57,8
+    EDITTEXT        IDC_LOGTIMESPANCOUNTER,90,17,182,17,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "查询时间：",IDC_STATIC,33,61,41,8
+    CONTROL         "",IDC_QUERYTIMESTARTCOUNTER,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,69,56,109,19
+    LTEXT           "至",IDC_STATIC,182,60,9,8
+    CONTROL         "",IDC_QUERYTIMESTOPCOUNTER,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,200,56,118,19
+END
+
+IDD_MASTERCONNECTION DIALOGEX 0, 0, 363, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "分析车次窗信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "查询",IDC_CHECKMASTER,104,111,50,14
+    PUSHBUTTON      "取消",IDC_CANCELMASTER,222,111,50,14
+    LTEXT           "日志时间跨度：",IDC_STATIC,33,20,57,8
+    EDITTEXT        IDC_LOGTIMESPANMASTER,90,17,180,18,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "查询时间：",IDC_STATIC,33,61,41,8
+    CONTROL         "",IDC_QUERYTIMESTARTMASTER,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,69,57,112,17
+    LTEXT           "至",IDC_STATIC,185,60,9,8
+    CONTROL         "",IDC_QUERYTIMESTOPMASTER,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,200,57,119,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "LogFileFilter Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "LogFileFilter"
+            VALUE "LegalCopyright", "版权所有 (C) 2018"
+            VALUE "OriginalFilename", "LogFileFilter.EXE"
+            VALUE "ProductName", "LogFileFilter 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CODEBIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 355
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 226
+    END
+
+    IDD_TRAINNUMWIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 356
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_POORSPERATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 356
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_COUNTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 356
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_MASTERCONNECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 356
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "LogFileFilter\nIPDBG日志解析工具\nLogFil\n\n\nLogFileFilter.Document\nLogFil Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "LogFileFilter"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "建立新文档\n新建"
+    ID_FILE_OPEN            "打开一个现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "将活动文档以一个新文件名保存\n另存为"
+    ID_FILE_PAGE_SETUP      "改变打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "改变打印机及打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "打开该文档"
+    ID_FILE_MRU_FILE2       "打开该文档"
+    ID_FILE_MRU_FILE3       "打开该文档"
+    ID_FILE_MRU_FILE4       "打开该文档"
+    ID_FILE_MRU_FILE5       "打开该文档"
+    ID_FILE_MRU_FILE6       "打开该文档"
+    ID_FILE_MRU_FILE7       "打开该文档"
+    ID_FILE_MRU_FILE8       "打开该文档"
+    ID_FILE_MRU_FILE9       "打开该文档"
+    ID_FILE_MRU_FILE10      "打开该文档"
+    ID_FILE_MRU_FILE11      "打开该文档"
+    ID_FILE_MRU_FILE12      "打开该文档"
+    ID_FILE_MRU_FILE13      "打开该文档"
+    ID_FILE_MRU_FILE14      "打开该文档"
+    ID_FILE_MRU_FILE15      "打开该文档"
+    ID_FILE_MRU_FILE16      "打开该文档"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "删除被选对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "复制被选对象并将其置于剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切被选对象并将其置于剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个文档\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n显隐工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n显隐状态栏"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预阅"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\LogFileFilter.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

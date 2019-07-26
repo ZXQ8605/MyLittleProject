@@ -1,0 +1,43 @@
+﻿生成启动时间为 2019/7/23 16:23:35。
+     1>项目“C:\Users\XQ\Desktop\LogFileFilter_20190228\LogFileFilter_20190122\LogFileFilter.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“.\Debug\LogFileFilter.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\LogFileFilter.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt CodeBitDlg.cpp
+         CodeBitDlg.cpp
+       ResourceCompile:
+         所有输出均为最新。
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\LogFileFilter.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:".\Debug\LogFileFilter.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\XQ\Desktop\LogFileFilter_20190228\LogFileFilter_20190122\Debug\LogFileFilter.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\LogFileFilter.lib" /MACHINE:X86 .\Debug\LogFileFilter.res
+         .\Debug\LogFileFilter.exe.embed.manifest.res
+         .\Debug\CodeBitDlg.obj
+         .\Debug\ColorListBox.obj
+         .\Debug\Counter.obj
+         .\Debug\LogFileFilter.obj
+         .\Debug\LogFileFilterDoc.obj
+         .\Debug\LogFileFilterView.obj
+         .\Debug\LogHandle.obj
+         .\Debug\MainFrm.obj
+         .\Debug\MasterConnection.obj
+         .\Debug\PoorSperation.obj
+         .\Debug\StdAfx.obj
+         .\Debug\TrainNumWin.obj
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:".\Debug\LogFileFilter.exe.embed.manifest" /manifest .\Debug\LogFileFilter.exe.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         LogFileFilter.vcxproj -> C:\Users\XQ\Desktop\LogFileFilter_20190228\LogFileFilter_20190122\.\Debug\LogFileFilter.exe
+       BscMake:
+         所有输出均为最新。
+       FinalizeBuildStatus:
+         正在删除文件“.\Debug\LogFileFilter.unsuccessfulbuild”。
+         正在对“.\Debug\LogFileFilter.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\XQ\Desktop\LogFileFilter_20190228\LogFileFilter_20190122\LogFileFilter.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:10.98
